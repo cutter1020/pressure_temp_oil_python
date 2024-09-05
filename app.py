@@ -27,9 +27,12 @@ def callback_function():
     request_data = request.get_json()
     print(request_data)
     if 'events' in request_data:
-        Reply_token = request_data['events'][0]['replyToken']
+        try:
+            msg = payload['events'][0]['message']['text']
+        except:
+            print("none")
         while True:
-            publish_result = mqtt_client.publish('fr3oiltemp', request_data['ESP'])
+            publish_result = mqtt_client.publish('fr3oiltemp', msg)
             if publish_result[0]==0:
                 break
             i+=1
