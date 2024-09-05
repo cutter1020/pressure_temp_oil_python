@@ -30,7 +30,7 @@ def callback_function():
         try:
             msg = payload['events'][0]['message']['text']
         except:
-            print("none")
+            msg = "none"
         while True:
             publish_result = mqtt_client.publish('fr3oiltemp', msg)
             if publish_result[0]==0:
