@@ -4,7 +4,7 @@ import os
 import requests
 
 secret = os.environ.get("LINE_CHANNEL_SECRET")
-bear = os.environ.get("LINE_CHANNEL_SECRET")
+bear = os.environ.get("LINE_CHANNEL_TOKEN")
 
 app = Flask(__name__)
 
