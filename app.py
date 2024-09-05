@@ -3,11 +3,8 @@ from flask_mqtt import Mqtt
 import os
 import requests
 
-#secret = os.environ.get("LINE_CHANNEL_SECRET")
-secret = "3e7feff6d865f72d1e9040e18a475f49"
-bear = "kJeKw8z19c9i1ucMYA5PszgYp3tmTzxWaC6m4AKtC3VMFS5fyxQ0BWA0Hzig4eabe9azgtoIjuszABY3HHnjjIsISiFCaA1ZoiHlFOoUPaKltj3MnXfUoJdjY1AGdoeiZrgxFzTADwnN1LJI7A0qZAdB04t89/1O/w1cDnyilFU="
-#bear = os.environ.get("LINE_CHANNEL_SECRET")
-#database_url = os.environ.get('DATABASE_URL')
+secret = os.environ.get("LINE_CHANNEL_SECRET")
+bear = os.environ.get("LINE_CHANNEL_SECRET")
 
 app = Flask(__name__)
 
