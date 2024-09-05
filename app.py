@@ -28,10 +28,11 @@ def callback_function():
     print(request_data)
     if 'events' in request_data:
         try:
-            msg = payload['events'][0]['message']['text']
+            msg = request_data['events'][0]['message']['text']
         except:
             msg = "none"
         while True:
+            print("msg : ", msg)
             publish_result = mqtt_client.publish('fr3oiltemp', msg)
             if publish_result[0]==0:
                 break
