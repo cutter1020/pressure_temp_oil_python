@@ -15,6 +15,11 @@ def checkState():
     global state
     return str(state)
 
+@app.route("/getcommand", methods=['GET'])
+def GetCommand():
+    global command
+    return str(command)
+
 @app.route("/callback", methods=['POST'])
 def callback_function():
     global state, command
