@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 import os
 import requests
+import json
 
 secret = os.environ.get("LINE_CHANNEL_SECRET")
 bear = os.environ.get("LINE_CHANNEL_TOKEN")
