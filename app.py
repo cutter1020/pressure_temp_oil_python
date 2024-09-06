@@ -9,8 +9,7 @@ bear = os.environ.get("LINE_CHANNEL_TOKEN")
 app = Flask(__name__)
 
 #mqtt
-#app.config['MQTT_BROKER_URL'] = 'broker.mqttdashboard.com'
-app.config['MQTT_BROKER_URL'] = 'broker.emqx.io'
+app.config['MQTT_BROKER_URL'] = "mqtt.eclipseprojects.io"
 app.config['MQTT_BROKER_PORT'] = 1883
 app.config['MQTT_USERNAME'] = ''  # Set this item when you need to verify username and password
 app.config['MQTT_PASSWORD'] = ''  # Set this item when you need to verify username and password
