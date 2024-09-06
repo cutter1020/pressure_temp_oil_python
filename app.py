@@ -30,12 +30,13 @@ def callback_function():
             msg = request_data['events'][0]['message']['text']
         except:
             msg = "none"
-        while True:
+        #while True:
+        for j in range(10):
             print("msg : ", msg)
             publish_result = mqtt_client.publish('fr3oiltemp', msg)
             print(publish_result)
-            if publish_result[0]==0:
-                break
+            #if publish_result[0]==0:
+                #break
             i+=1
         
     elif 'ESP' in request_data:
