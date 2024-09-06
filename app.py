@@ -33,6 +33,7 @@ def callback_function():
         while True:
             print("msg : ", msg)
             publish_result = mqtt_client.publish('fr3oiltemp', msg)
+            print(publish_result)
             if publish_result[0]==0:
                 break
             i+=1
