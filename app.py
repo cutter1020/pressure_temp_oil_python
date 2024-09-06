@@ -51,6 +51,7 @@ def callback_function():
                 "text":request_data['ESP']
             }]
         }
+        data = json.dumps(data)
         r = requests.post(LINE_API, headers=headers, data=data)
         print(r)
         i=-1
