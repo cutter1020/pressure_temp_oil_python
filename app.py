@@ -18,7 +18,8 @@ def checkState():
 
 @app.route("/getcommand", methods=['GET'])
 def GetCommand():
-    global command
+    global command, state
+    print("state : ", state)
     return str(command)
 
 @app.route("/callback", methods=['POST'])
