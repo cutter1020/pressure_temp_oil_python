@@ -19,7 +19,9 @@ def checkState():
 @app.route("/getcommand", methods=['GET'])
 def GetCommand():
     global command, state
+    esp_state = request.args.get('state') 
     print("state : ", state)
+    print("esp_state : ", esp_state)
     return str(command)
 
 @app.route("/callback", methods=['POST'])
